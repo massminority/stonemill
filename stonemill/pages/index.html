@@ -51,9 +51,8 @@
 
           <h3>Content types you've created in the CMS so far.</h3>
 
-          <ul>
           {% for type in cms_types %}
-            <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
+            <div class="col-sm-3"><a href="{{ url(type) }}">{{ type.name }}</a></div>
           {% endfor %}
           </ul>
 
