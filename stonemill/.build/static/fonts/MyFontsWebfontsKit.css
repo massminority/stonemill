@@ -1,0 +1,98 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3304988, 2016-11-07T14:07:51-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BrothersOT-Bold by Emigre
+ * URL: http://www.myfonts.com/fonts/emigre/brothers-ot/bold/
+ * Copyright: Copyright (C) 1999, Emigre, Inc. All rights reserved. Designed by John Downer
+ * 
+ * Webfont: YWFTUltramagnetic-Oblique by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/regular-oblique/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-LightOblique by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/light-oblique/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/regular/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-ExtraBoldObli by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/extra-bold-oblique/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-ExtraBold by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/extra-bold/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-Light by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/light/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-BoldOblique by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/bold-oblique/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-Black by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/black/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-BlackOblique by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/black-oblique/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * Webfont: YWFTUltramagnetic-Bold by YouWorkForThem
+ * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/bold/
+ * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3304988
+ * Licensed pageviews: 110,000
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/326e1c");
+
+  
+@font-face {font-family: 'BrothersOT-Bold';src: url('webfonts/326E1C_0_0.eot');src: url('webfonts/326E1C_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_0_0.woff2') format('woff2'),url('webfonts/326E1C_0_0.woff') format('woff'),url('webfonts/326E1C_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-Oblique';src: url('webfonts/326E1C_1_0.eot');src: url('webfonts/326E1C_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_1_0.woff2') format('woff2'),url('webfonts/326E1C_1_0.woff') format('woff'),url('webfonts/326E1C_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-LightOblique';src: url('webfonts/326E1C_2_0.eot');src: url('webfonts/326E1C_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_2_0.woff2') format('woff2'),url('webfonts/326E1C_2_0.woff') format('woff'),url('webfonts/326E1C_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic';src: url('webfonts/326E1C_3_0.eot');src: url('webfonts/326E1C_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_3_0.woff2') format('woff2'),url('webfonts/326E1C_3_0.woff') format('woff'),url('webfonts/326E1C_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-ExtraBoldObli';src: url('webfonts/326E1C_4_0.eot');src: url('webfonts/326E1C_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_4_0.woff2') format('woff2'),url('webfonts/326E1C_4_0.woff') format('woff'),url('webfonts/326E1C_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-ExtraBold';src: url('webfonts/326E1C_5_0.eot');src: url('webfonts/326E1C_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_5_0.woff2') format('woff2'),url('webfonts/326E1C_5_0.woff') format('woff'),url('webfonts/326E1C_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-Light';src: url('webfonts/326E1C_6_0.eot');src: url('webfonts/326E1C_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_6_0.woff2') format('woff2'),url('webfonts/326E1C_6_0.woff') format('woff'),url('webfonts/326E1C_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-BoldOblique';src: url('webfonts/326E1C_7_0.eot');src: url('webfonts/326E1C_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_7_0.woff2') format('woff2'),url('webfonts/326E1C_7_0.woff') format('woff'),url('webfonts/326E1C_7_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-Black';src: url('webfonts/326E1C_8_0.eot');src: url('webfonts/326E1C_8_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_8_0.woff2') format('woff2'),url('webfonts/326E1C_8_0.woff') format('woff'),url('webfonts/326E1C_8_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-BlackOblique';src: url('webfonts/326E1C_9_0.eot');src: url('webfonts/326E1C_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_9_0.woff2') format('woff2'),url('webfonts/326E1C_9_0.woff') format('woff'),url('webfonts/326E1C_9_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'YWFTUltramagnetic-Bold';src: url('webfonts/326E1C_A_0.eot');src: url('webfonts/326E1C_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/326E1C_A_0.woff2') format('woff2'),url('webfonts/326E1C_A_0.woff') format('woff'),url('webfonts/326E1C_A_0.ttf') format('truetype');}
+ 

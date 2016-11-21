@@ -19,44 +19,66 @@
 
 {% block content %}
 
-  <div class="container">
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 text-center">
+			<a onclick="$('.bread-filters').slideDown(); $grid.isotope({ filter: '.bread-item, .breadcategory-item' });">Bread</a>
+		</div>
+		<div class="col-md-4 text-center">
+			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '*' });">See All</a>
+
+		</div>
+		<div class="col-md-4 text-center">
+			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '.text-item' });">Text</a>
+		</div>
+	</div>
+	<div class="row bread-filters">
+		{% for cat in cms.breadcategory %}
+		<div class="col-md-3 text-center">
+			<a onclick="$grid.isotope({ filter: '.{{cat.name}}' });">{{ cat.name_of_bread_category}}</a>
+		</div>
+		{% endfor %}
+	</div>
     <div class="row">
       <div class="col-md-12">
 
-        <h1>Hello <a href="http://getbootstrap.com/">Boostrap</a>!</h1>
+        
 
-        <p>
-          This theme installed Bootstrap's 3.3.1 source LESS and Javascript files.
-          It also set up some <a href="http://gruntjs.com">Grunt</a> watch commands to build CSS from the <code>less</code> folder as you build.
-          You'll need to <strong>restart your local server</strong> to get it to operate properly.
-        </p>
-
-        <h3>If you need to update boostrap.</h3>
-
-        <ol>
-          <li>Open your terminal and navigate to this site's directory</li>
-          <li>Run <code>npm install -g bower</code></li>
-          <li>Run <code>bower update</code></li>
-          <li>Run <code>grunt copy</code></li>
-        </ol>
-
-        <hr/>
-
-        <p>This is your homepage, located at /pages/index.html.</p>
-
-        <p><a href="/cms/" class="btn btn-primary">Looking for the CMS?</a></p>
-
-        {# If you have at least content page type, we show a list. #}
-        {% if cms_types|size !== 0 %}
-
-          <h3>Content types you've created in the CMS so far.</h3>
-
-          {% for type in cms_types %}
-            <div class="col-sm-3"><a href="{{ url(type) }}">{{ type.name }}</a></div>
+  
+			<div class="grid">
+			{% for item in merge(cms.text, cms.breadcategory) %}
+			{% set blank = random([0,1,1,1,0]) %}
+				{% if blank==1 %}
+					<div class="grid-item">
+						&nbsp;
+					</div>
+				{% endif %}
+				{% if item._type == 'breadcategory' %}
+					<div class="text-center grid-item bread-item {{item.name}}" data-category="{{item.name}}">
+			            <div class="overlay">
+				            <img src="{{ item.thumbnail|imageCrop(250,250) }}">
+				            <div class="text"><a href="{{url(item)}}">{{ item.name_of_bread_category }}</a></div>
+			            </div>
+			        </div>
+			        {% for bread in item.breads %}
+						<div class="text-center grid-item bread-item {{item.name}}" data-category="{{item.name}}">
+					            <div class="overlay">
+						            <img src="{{ bread.thumbnail|imageCrop(250,250) }}">
+						            <div class="text"><a href="{{url(bread)}}">{{ bread.name }}</a></div>
+					            </div>
+				        </div>
+					{% endfor %}
+					
+				{% else %}
+				<div class="text-center grid-item {{item._type}}-item ">
+		            <div class="overlay">
+			            <img src="{{ item.thumbnail|imageCrop(250,250) }}">
+			            <div class="text"><a href="{{url(item)}}">{{ item.name }}</a></div>
+		            </div>
+	        	</div>
+				{% endif %}
           {% endfor %}
-          </ul>
-
-        {% endif %}
+		  </div>
 
       </div>
     </div>

@@ -31,12 +31,78 @@
     <link rel="apple-touch-icon icon-precomposed" href="/static/images/apple-touch-icon.png"/>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
+	<!--
+	/**
+	 * @license
+	 * MyFonts Webfont Build ID 3304988, 2016-11-07T14:07:51-0500
+	 * 
+	 * The fonts listed in this notice are subject to the End User License
+	 * Agreement(s) entered into by the website owner. All other parties are 
+	 * explicitly restricted from using the Licensed Webfonts(s).
+	 * 
+	 * You may obtain a valid license at the URLs below.
+	 * 
+	 * Webfont: BrothersOT-Bold by Emigre
+	 * URL: http://www.myfonts.com/fonts/emigre/brothers-ot/bold/
+	 * Copyright: Copyright (C) 1999, Emigre, Inc. All rights reserved. Designed by John
+	 * Downer
+	 * 
+	 * Webfont: YWFTUltramagnetic-Oblique by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/regular-oblique/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-LightOblique by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/light-oblique/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/regular/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-ExtraBoldObli by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/extra-bold-oblique/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-ExtraBold by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/extra-bold/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-Light by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/light/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-BoldOblique by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/bold-oblique/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-Black by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/black/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-BlackOblique by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/black-oblique/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * Webfont: YWFTUltramagnetic-Bold by YouWorkForThem
+	 * URL: http://www.myfonts.com/fonts/ywft/ywft-utramagnetic/bold/
+	 * Copyright: Copyright (c) 1996 by YouWorkForThem. All rights reserved.
+	 * 
+	 * 
+	 * License: http://www.myfonts.com/viewlicense?type=web&buildid=3304988
+	 * Licensed pageviews: 110,000
+	 * 
+	 * © 2016 MyFonts Inc
+	*/
+	
+	-->
+	<link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
 
     
     
 
     <!-- build:css /static/css/minified.css -->
     <link rel="stylesheet" href="/static/css/app.css"/>
+    <link rel="stylesheet" href="/static/css/main.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
 
@@ -58,46 +124,98 @@
       
       
 
-  <div class="container">
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 text-center">
+			<a onclick="$('.bread-filters').slideDown(); $grid.isotope({ filter: '.bread-item, .breadcategory-item' });">Bread</a>
+		</div>
+		<div class="col-md-4 text-center">
+			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '*' });">See All</a>
+
+		</div>
+		<div class="col-md-4 text-center">
+			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '.text-item' });">Text</a>
+		</div>
+	</div>
+	<div class="row bread-filters">
+		
+		<div class="col-md-3 text-center">
+			<a onclick="$grid.isotope({ filter: '.honestwellness' });">Honest Wellness</a>
+		</div>
+		
+		<div class="col-md-3 text-center">
+			<a onclick="$grid.isotope({ filter: '.trulyoriginal' });">Truly Original</a>
+		</div>
+		
+	</div>
     <div class="row">
       <div class="col-md-12">
 
-        <h1>Hello <a href="http://getbootstrap.com/">Boostrap</a>!</h1>
-
-        <p>
-          This theme installed Bootstrap's 3.3.1 source LESS and Javascript files.
-          It also set up some <a href="http://gruntjs.com">Grunt</a> watch commands to build CSS from the <code>less</code> folder as you build.
-          You'll need to <strong>restart your local server</strong> to get it to operate properly.
-        </p>
-
-        <h3>If you need to update boostrap.</h3>
-
-        <ol>
-          <li>Open your terminal and navigate to this site's directory</li>
-          <li>Run <code>npm install -g bower</code></li>
-          <li>Run <code>bower update</code></li>
-          <li>Run <code>grunt copy</code></li>
-        </ol>
-
-        <hr/>
-
-        <p>This is your homepage, located at /pages/index.html.</p>
-
-        <p><a href="/cms/" class="btn btn-primary">Looking for the CMS?</a></p>
-
-        
         
 
-          <h3>Content types you've created in the CMS so far.</h3>
-
+  
+			<div class="grid">
+			
+			
+				
+					<div class="grid-item">
+						&nbsp;
+					</div>
+				
+				
+				<div class="text-center grid-item text-item ">
+		            <div class="overlay">
+			            <img src="">
+			            <div class="text"><a href="/text/recipe1/">recipe1</a></div>
+		            </div>
+	        	</div>
+				
           
-            <div class="col-sm-3"><a href="/bread/">bread</a></div>
+			
+				
+					<div class="grid-item">
+						&nbsp;
+					</div>
+				
+				
+					<div class="text-center grid-item bread-item honestwellness" data-category="honestwellness">
+			            <div class="overlay">
+				            <img src="">
+				            <div class="text"><a href="/breadcategory/honestwellness/">Honest Wellness</a></div>
+			            </div>
+			        </div>
+			        
+						<div class="text-center grid-item bread-item honestwellness" data-category="honestwellness">
+					            <div class="overlay">
+						            <img src="https://lh3.googleusercontent.com/Obqjt0hYdITLd03Suu5A7jF4cXOO1NBFxOAelM_jtN9_5r_Dv8UnrlufV5cTJLIkani1cDcIIyCn7NWz2d4O34JrhY4=w250-h250-c">
+						            <div class="text"><a href="/bread/still-yummy-bread/">Still yummy bread</a></div>
+					            </div>
+				        </div>
+					
+					
+				
           
-            <div class="col-sm-3"><a href="/text/">text</a></div>
+			
+				
+				
+					<div class="text-center grid-item bread-item trulyoriginal" data-category="trulyoriginal">
+			            <div class="overlay">
+				            <img src="">
+				            <div class="text"><a href="/breadcategory/trulyoriginal/">Truly Original</a></div>
+			            </div>
+			        </div>
+			        
+						<div class="text-center grid-item bread-item trulyoriginal" data-category="trulyoriginal">
+					            <div class="overlay">
+						            <img src="https://lh3.googleusercontent.com/J3m6ejIPXd1w_aMV5Ot3UufhxH1saobQplBUgDcCakCGrWWOQxJfECE3Cq1wlxl4XEgb9xgecvWunx6ax1NjF8AhkhO2Yg=w250-h250-c">
+						            <div class="text"><a href="/bread/yummy-bread/">yummy bread</a></div>
+					            </div>
+				        </div>
+					
+					
+				
           
-          </ul>
-
-        
+		  </div>
 
       </div>
     </div>
@@ -109,12 +227,13 @@
 
       
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+	  <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
       
       
 
       <!-- build:js /static/javascript/minified.js -->
         <script src="/static/javascript/bootstrap/bootstrap.js"></script>
+        <script src="/static/javascript/main.js"></script>
       <!-- endbuild -->
 
       
