@@ -1,18 +1,32 @@
 body {
 
 }
+
 .grid-item {
- width: 25%;
- position: relative;
+ 	width: 25%;
+ 	position: relative;
+}
+.grid-item img{
+	width: 100%;
+	z-index: 1;
+}
+.large {
+	width: 50%;
+	position: relative;
 }
 .overlay {
 	width: 100%;
+	transition: 0.2s;
 	height: 100%;
+	position: absolute;
+}
+.overlay:hover {
+	opacity: 0;
 }
 .overlay img {
 	width: 100%;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 .overlay .text {
 	width: 100%;
