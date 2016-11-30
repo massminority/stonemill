@@ -104,8 +104,9 @@
     <link rel="stylesheet" href="/static/css/app.css"/>
     <link rel="stylesheet" href="/static/css/featherlight.css"/>
 
-    <link rel="stylesheet" href="/static/css/main.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
+    <link rel="stylesheet" href="/static/css/main.css"/>
+
     <!-- endbuild -->
 
     
@@ -118,38 +119,77 @@
       <![endif]-->
 
       
+<!---
 <form action="/search-results/" method="get" data-search-index="false">
  <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
 </form>
-
+-->
 
       
       
-
-  <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4 text-center">
-			<a onclick="breadFilter('.bread-item, .breadfamily-item');">Bread</a>
-		</div>
-		<div class="col-md-4 text-center">
-			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '*' });">See All</a>
-
-		</div>
-		<div class="col-md-4 text-center">
-			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '.text-item' });">Text</a>
-		</div>
+<div id="header">
+	<video id="bgvid" playsinline autoplay muted loop>
+		<source src="/static/videos/homefields.mp4" type="video/mp4">
+	</video>
+	<div id="header-text" class="text-center">
+		<img src="/static/images/header-logo.png">
+		<p>You can't hurry slow</p>
 	</div>
-	<div class="row bread-filters">
-		
-		<div class="col-md-3 text-center">
-			<a onclick="$grid.isotope({ filter: '.honestwellness' });">Honest Wellness</a>
-		</div>
-		
-		<div class="col-md-3 text-center">
-			<a onclick="$grid.isotope({ filter: '.trulyoriginal' });">Truly Original</a>
+</div>
+  <div class="container-fluid" style="margin-top: -5px;">
+		<div class="row menu">
+		<li class="menu-item">
+			<a onclick="breadFilter('.bread-item, .breadfamily-item');">Our Bread</a>
+		</li>
+		<li class="menu-item logo">
+			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '*' });">
+				<img class="menu-logo" src="/static/images/menu-logo.png">
+			</a>
+		</li>
+		<li class="menu-item">
+			<a data-featherlight="/text/about-us/" onclick="$('.bread-filters').slideUp();">About Us</a>
+		</li>
+		<div class="search">
+			<form action="/search-results/" class="search-form" method="get" data-search-index="false">
+			  	<input type="text" placeholder="Search Stonemill Bakehouse" id="tipue_search_input" name="q">
+			</form>
 		</div>
 		
 	</div>
+	<div class="bread-filters">
+		<div class="row">
+			
+			<div class="col-xs-6 col-md-3 text-left family-filter honestwellness-header">
+				<a onclick="breadFilter('.honestwellness');">
+					<h2 class="family-title" style="color: ">Honest Wellness</h2><hr style="border-top: 5px solid ;"><p>Our Honest Wellness breads are fermented for 4 hours for the absolute best in class nutrition and taste. We hand-select only the healthiest ingredients that provide nutritional benefits to support your health and wellbeing.</p>
+				</a>
+			</div>
+			
+			<div class="col-xs-6 col-md-3 text-left family-filter trulyoriginal-header">
+				<a onclick="breadFilter('.trulyoriginal');">
+					<h2 class="family-title" style="color: #d4d1ba">Truly Original</h2><hr style="border-top: 5px solid #d4d1ba;"><p>Our flavours are truly original just like how we slow craft our bread. Better bread takes time so we ferment our breads for as long as 24 hours for exceptional taste and health benefits. Keep an eye out for our harvest breads available for limited runs.</p>
+				</a>
+			</div>
+			
+			<div class="col-xs-6 col-md-3 text-left family-filter authenticsourdoughrye-header">
+				<a onclick="breadFilter('.authenticsourdoughrye');">
+					<h2 class="family-title" style="color: #9d0000">Authentic Sourdough Rye</h2><hr style="border-top: 5px solid #9d0000;"><p>Our Authentic Sourdough Rye Breads are always fermented for at least 12 hours for optimal taste and nutrition and are baked with grain we grow ourselves in P.E.C. We use our 100-year-old family baking expertise in creating robust flavours, often only found overseas.</p>
+				</a>
+			</div>
+			
+			<div class="col-xs-6 col-md-3 text-left family-filter organiclivesprouts-header">
+				<a onclick="breadFilter('.organiclivesprouts');">
+					<h2 class="family-title" style="color: #d7c384">Organic Live Sprouts</h2><hr style="border-top: 5px solid #d7c384;"><p>We only use nutrient dense sprouted grains that are naturally sprouted for 24 hours to make our Organic Live Sprouts Breads. Sprouting creates an uncompromisingly delicious and wholesome loaf, each and every time.</p>
+				</a>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center" style="margin: 2em 0 2em;">
+				<a class="button-link" onclick="breadFilter('.bread-item, .breadfamily-item');" >View All</a>
+			</div>
+		</div>
+  	</div>
     <div class="row">
       <div class="col-md-12">
 			<div class="grid">
@@ -170,18 +210,36 @@
           
 			
 				
-					<div class="grid-item text-center">
+					<!---<div class="grid-item text-center bread-item">
 			            <div class="overlay">
 						<img src="https://lh3.googleusercontent.com/QG6MpC2RF47Xz6qCj2-ixq-GUFfH82oQExE2Uyy9iuQfnfseGXdRjV9Aqa0WiRuI2El3t_Z_iuqtwK75Q8jQdIPY9U2WMg=w800-h800-c">
 			            </div>
 							<img src="https://lh3.googleusercontent.com/7EigrUcgZVuw9jGyjHPytOt1-fZKuDLhFJuKSpjDePLeiBtPAKQhpK9TGa0tiK-HBk1W1v9lksn826Sj2kTwK0udbD1o=w800-h800-c">
+					</div>--->
+					<div class="grid-item text-center bread-item">
+						<img src="https://lh3.googleusercontent.com/QG6MpC2RF47Xz6qCj2-ixq-GUFfH82oQExE2Uyy9iuQfnfseGXdRjV9Aqa0WiRuI2El3t_Z_iuqtwK75Q8jQdIPY9U2WMg=w800-h800-c">
 					</div>
+					
+				
+				
+				<div class="text-center grid-item text-item ">
+		            <a href="#" data-featherlight="/text/about-us/">
+			            <div class="overlay">
+				            <div class="text">About Us</div>
+			            </div>
+			            <img src="https://lh3.googleusercontent.com/5PpBTKAl9muZcKydGpCJBpiRxAy0r4R4hBietAmW9mG-oxLs82f2AFaJouxLRPLlg0_MsfjYbsVQVwu8TnLsRInf3XOTug=w400-h400-c">
+		            </a>
+
+	        	</div>
+				
+          
+			
 				
 				
 					<div class="text-center grid-item large bread-item honestwellness" data-category="honestwellness">
 				            <a onclick="breadFilter('.honestwellness');">
 					            <div class="overlay">
-						            <div class="text">Honest Wellness</div>
+						            <img src="https://lh3.googleusercontent.com/bOYxpO4BVEI8fVaErk-FXSznCpxCsSoW_bAUdXspd_OCqBSSEz1L2jr_wS2eoE6F_WXHsJWALXBLux1WPXMAwcGT-Z0u=w800-h800-c">
 					            </div>
 									<img src="https://lh3.googleusercontent.com/pLld3oInMh0uBqsgdFZuVsDBK3O2rdRSUTO6LsSiZwoGurp4Se2KbXZ-Oon2bk8ve7hIYTKwJf7QmRkI8h2XLRUGfmgK=w800-h800-c">
 					        </a>
@@ -189,20 +247,10 @@
 
 			        
 						<div class="text-center grid-item bread-item honestwellness" data-category="honestwellness">
-					            <a href="#" data-featherlight="/bread/still-yummy-bread/">
-						            <div class="overlay">
-							            <img src="https://lh3.googleusercontent.com/Obqjt0hYdITLd03Suu5A7jF4cXOO1NBFxOAelM_jtN9_5r_Dv8UnrlufV5cTJLIkani1cDcIIyCn7NWz2d4O34JrhY4=w400-h400-c">
-							            <div class="text">Still yummy bread</div>
-						            </div>
-							        	<img src="https://lh3.googleusercontent.com/Obqjt0hYdITLd03Suu5A7jF4cXOO1NBFxOAelM_jtN9_5r_Dv8UnrlufV5cTJLIkani1cDcIIyCn7NWz2d4O34JrhY4=w400-h400-c">
-								</a>
-				        </div>
-					
-						<div class="text-center grid-item bread-item honestwellness" data-category="honestwellness">
-					            <a href="#" data-featherlight="/bread/cranberry-pumpkinseed/">
+					            <a href="#" data-featherlight="/bread/sprouted-flax/">
 						            <div class="overlay">
 							            <img src="https://lh3.googleusercontent.com/gdUHDH8q-fEJ9fUCYqeIMWPopVBgZCcBwiGAQmbbDaWbmWMhz0iHY4JLUH75Mf5M4zSXsOMvoGFkyLfNWONCME0CAVVy=w400-h400-c">
-							            <div class="text">Cranberry Pumpkinseed</div>
+							            <div class="text">Sprouted Flax</div>
 						            </div>
 							        	<img src="https://lh3.googleusercontent.com/gdUHDH8q-fEJ9fUCYqeIMWPopVBgZCcBwiGAQmbbDaWbmWMhz0iHY4JLUH75Mf5M4zSXsOMvoGFkyLfNWONCME0CAVVy=w400-h400-c">
 								</a>
@@ -217,7 +265,7 @@
 					<div class="text-center grid-item large bread-item trulyoriginal" data-category="trulyoriginal">
 				            <a onclick="breadFilter('.trulyoriginal');">
 					            <div class="overlay">
-						            <div class="text">Truly Original</div>
+						            <img src="https://lh3.googleusercontent.com/Kj4F9pb354-xuylQFi4j-4a9kl2pYD0k1N7mHhgZH3P503FA39jRWVTJHljYeAmhJR6EfHqgiV8jYbq4kVQvNrhF18Jx=w800-h800-c">
 					            </div>
 									<img src="https://lh3.googleusercontent.com/KMte9hp6Cfx8-iVppd2t5MQZbeknHIVbCXsDgE_miSIfbI602efFB_2MbVgzaCbUcimuPtHZ9VQ8Di85qIuS51aY6Jo1=w800-h800-c">
 					        </a>
@@ -234,6 +282,59 @@
 								</a>
 				        </div>
 					
+					
+				
+          
+			
+				
+					<!---<div class="grid-item text-center bread-item">
+			            <div class="overlay">
+						<img src="https://lh3.googleusercontent.com/QG6MpC2RF47Xz6qCj2-ixq-GUFfH82oQExE2Uyy9iuQfnfseGXdRjV9Aqa0WiRuI2El3t_Z_iuqtwK75Q8jQdIPY9U2WMg=w800-h800-c">
+			            </div>
+							<img src="https://lh3.googleusercontent.com/7EigrUcgZVuw9jGyjHPytOt1-fZKuDLhFJuKSpjDePLeiBtPAKQhpK9TGa0tiK-HBk1W1v9lksn826Sj2kTwK0udbD1o=w800-h800-c">
+					</div>--->
+					<div class="grid-item text-center bread-item">
+						<img src="https://lh3.googleusercontent.com/QG6MpC2RF47Xz6qCj2-ixq-GUFfH82oQExE2Uyy9iuQfnfseGXdRjV9Aqa0WiRuI2El3t_Z_iuqtwK75Q8jQdIPY9U2WMg=w800-h800-c">
+					</div>
+					
+				
+				
+					<div class="text-center grid-item large bread-item authenticsourdoughrye" data-category="authenticsourdoughrye">
+				            <a onclick="breadFilter('.authenticsourdoughrye');">
+					            <div class="overlay">
+						            <img src="https://lh3.googleusercontent.com/r6NegC_tM9RjLK54sG4cf-ab9Z2IV-gS94nMKR3K8yGVwv_Iq_fdAIPZDbsHFk6A5rvPFMzpdEzgjlPNT4Npmqshzn0=w800-h800-c">
+					            </div>
+									<img src="https://lh3.googleusercontent.com/POLlHP-Mvr6AFOx9E1AIM2_h11UIRDABXtCbkbCxX9EG8aYLsJPAR1cSPlZZdd_dbnHqbTRmBQvOA0dLEycICRtza9lz=w800-h800-c">
+					        </a>
+			        </div>
+
+			        
+						<div class="text-center grid-item bread-item authenticsourdoughrye" data-category="authenticsourdoughrye">
+					            <a href="#" data-featherlight="/bread/still-yummy-bread/">
+						            <div class="overlay">
+							            <img src="https://lh3.googleusercontent.com/Obqjt0hYdITLd03Suu5A7jF4cXOO1NBFxOAelM_jtN9_5r_Dv8UnrlufV5cTJLIkani1cDcIIyCn7NWz2d4O34JrhY4=w400-h400-c">
+							            <div class="text">Still yummy bread</div>
+						            </div>
+							        	<img src="https://lh3.googleusercontent.com/Obqjt0hYdITLd03Suu5A7jF4cXOO1NBFxOAelM_jtN9_5r_Dv8UnrlufV5cTJLIkani1cDcIIyCn7NWz2d4O34JrhY4=w400-h400-c">
+								</a>
+				        </div>
+					
+					
+				
+          
+			
+				
+				
+					<div class="text-center grid-item large bread-item organiclivesprouts" data-category="organiclivesprouts">
+				            <a onclick="breadFilter('.organiclivesprouts');">
+					            <div class="overlay">
+						            <img src="https://lh3.googleusercontent.com/FDe6Tx-qegBelVxroFugW8AzxL7zyUfENCruKHs11DSpa5obn5v8obTApO_6PbEBQNlVYiaDHji2qkifz5mg5urFCPY=w800-h800-c">
+					            </div>
+									<img src="">
+					        </a>
+			        </div>
+
+			        
 					
 				
           

@@ -2,3 +2,213 @@
 
 @import "bootstrap/bootstrap.less";
 
+body {
+	background: url("/static/images/bg.png") repeat;
+	font-family: "YWFTUltramagnetic-Light";
+}
+#header {
+	position: relative
+}
+#header-text {
+	position: absolute;
+	z-index: 5;
+    width: 25%;
+    /* margin: auto; */
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    color: white;
+}
+#header-text p {
+	margin-top: 3em;
+    font-size: 2.1em;
+}
+#header-text img{
+	width: 100%;
+}
+video {
+	width: 100%;
+	position: relative;
+	z-index: 4;
+}
+.menu {
+	background-color: #b4252d;
+	font-family: "YWFTUltramagnetic-Bold";
+	font-size: 1.5em;
+	text-align: center;
+}
+.menu  {
+	color: white;
+	position: relative;
+}
+.menu-item {
+	display: inline-block;
+	position: relative;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+.menu-item a{
+	color: white;
+	padding:  0 20px;
+	line-height: 2em;
+
+}
+.menu-item:hover {
+	background-color: #9d2027;
+
+}
+.menu-item a:hover, .menu-item a:focus{
+	color: white;
+	text-decoration: none;
+}
+.logo {
+	max-width: 150px;
+	z-index: 3;
+	width: 20%;
+}
+.menu-logo {
+	width: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+.search {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.search input {
+	font-size: 1em;
+}
+.search-form {
+	color: black;
+}
+.grid-item {
+ 	width: 25%;
+ 	position: relative;
+}
+.grid-item img{
+	width: 100%;
+	z-index: 1;
+}
+.large {
+	width: 50%;
+	position: relative;
+}
+.overlay {
+	width: 100%;
+	transition: 0.2s;
+	height: 100%;
+	position: absolute;
+}
+.overlay:hover {
+	opacity: 0;
+}
+.overlay img {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+.overlay .text {
+	width: 100%;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.6);
+}
+.bread-filters {
+	display: none;
+}
+
+.bread-filters .row:first-of-type {
+	box-shadow: 0px 8px 5px -5px #888888;
+	margin: 0;
+}
+.featherlight .featherlight-close-icon {
+	width: auto;
+    top: 10px;
+    right: 10px;
+}
+.family-filter {
+	padding-top: 50px;
+	transition: 0.2s;
+	cursor: pointer;
+	border: 1px solid #888888;
+	display: table-cell;
+	float: none;
+}
+.family-filter a:hover {
+	text-decoration: none;
+}
+
+.family-filter h2 {
+	font-family: 'BrothersOT-Bold';
+}
+.family-filter p {
+	font-family: 'YWFTUltramagnetic';
+	color: #AAAAAA;
+}
+.family-filter hr{
+	margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    border: 0;
+    width: 30%;
+}
+.active-filter {
+	background-color: white;
+	box-shadow: 0px 4px 10px #888888;
+    border: none;
+}
+.active-filter p{
+	color: black;
+}
+.button-link, .button-link:focus {
+	font-family: 'YWFTUltramagnetic-Bold';
+	padding: 5px 20px;
+	border: 5px solid #aa040d;
+	text-decoration: none;
+	color: #aa040d;
+	transition: 0.2s;
+	border-radius: 25px;
+}
+.button-link:hover {
+	background-color: #aa040d;
+	text-decoration: none;
+	color: white;
+	border: 5px solid #aa040d;
+}
+@media (max-width:1200px){
+	#header-text {
+		font-size: 10px;
+	}
+}
+@media (max-width:992px){
+	
+}
+@media (max-width:767px){
+	#header-text p {
+		margin-top: 1em;
+	}
+	.menu {
+		font-size: 1em;
+	}
+	.bread-filters .row:first-of-type {
+		box-shadow: none;
+	}
+	.family-filter{
+		display: block;
+		float: left;
+		border: 0px;
+	}
+	.family-filter h2 {
+		font-size: 20px;
+	}
+	.family-filter p {
+		display: none;
+	}
+
+	
+}

@@ -6,9 +6,13 @@
 			category: '[data-category]'
 		}
 	});
-	$grid.isotope({ filter: '*' });
 	
 	function breadFilter(filtertext){
-		$('.bread-filters').slideDown();
-		$grid.isotope({ filter: filtertext });
+		$('.bread-filters').slideDown(); $grid.isotope({ filter: filtertext });
+		$('.family-filter').removeClass('active-filter'); 
+		$(filtertext+'-header').addClass('active-filter');
 	}
+	
+	$(document).ready(function(){
+		$grid.isotope({ filter: '*' });
+	});

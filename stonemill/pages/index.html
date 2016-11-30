@@ -18,45 +18,73 @@
 {% block title %}{% parent %} - Homepage{% endblock %}
 
 {% block content %}
-
-  <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4 text-center">
-			<a onclick="breadFilter('.bread-item, .breadfamily-item');">Bread</a>
-		</div>
-		<div class="col-md-4 text-center">
-			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '*' });">See All</a>
-
-		</div>
-		<div class="col-md-4 text-center">
-			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '.text-item' });">Text</a>
-		</div>
+<div id="header">
+	<video id="bgvid" playsinline autoplay muted loop>
+		<source src="/static/videos/homefields.mp4" type="video/mp4">
+	</video>
+	<div id="header-text" class="text-center">
+		<img src="/static/images/header-logo.png">
+		<p>You can't hurry slow</p>
 	</div>
-	<div class="row bread-filters">
-		{% for cat in cms.breadfamily %}
-		<div class="col-md-3 text-center">
-			<a onclick="$grid.isotope({ filter: '.{{cat.name}}' });">{{ cat.name_of_bread_family}}</a>
+</div>
+  <div class="container-fluid" style="margin-top: -5px;">
+		<div class="row menu">
+		<li class="menu-item">
+			<a onclick="breadFilter('.bread-item, .breadfamily-item');">Our Bread</a>
+		</li>
+		<li class="menu-item logo">
+			<a onclick="$('.bread-filters').slideUp(); $grid.isotope({ filter: '*' });">
+				<img class="menu-logo" src="/static/images/menu-logo.png">
+			</a>
+		</li>
+		<li class="menu-item">
+			<a data-featherlight="/text/about-us/" onclick="$('.bread-filters').slideUp();">About Us</a>
+		</li>
+		<div class="search">
+			<form action="/search-results/" class="search-form" method="get" data-search-index="false">
+			  	<input type="text" placeholder="Search Stonemill Bakehouse" id="tipue_search_input" name="q">
+			</form>
 		</div>
-		{% endfor %}
+		
 	</div>
+	<div class="bread-filters">
+		<div class="row">
+			{% for cat in cms.breadfamily %}
+			<div class="col-xs-6 col-md-3 text-left family-filter {{cat.name}}-header">
+				<a onclick="breadFilter('.{{cat.name}}');">
+					<h2 class="family-title" style="color: {{ cat.color }}">{{ cat.name_of_bread_family}}</h2><hr style="border-top: 5px solid {{cat.color}};"><p>{{ cat.description }}</p>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center" style="margin: 2em 0 2em;">
+				<a class="button-link" onclick="breadFilter('.bread-item, .breadfamily-item');" >View All</a>
+			</div>
+		</div>
+  	</div>
     <div class="row">
       <div class="col-md-12">
 			<div class="grid">
 			{% for item in merge(cms.text, cms.breadfamily) %}
-			{% set blank = random([1,1,1,0]) %}
+			{% set blank = random([0,0,0,1]) %}
 				{% if blank==1 %}
-					<div class="grid-item text-center">
+					<!---<div class="grid-item text-center bread-item">
 			            <div class="overlay">
 						<img src="{{ random(cms.emptyspace).gif_nonactive|imageCrop(800,800)  }}">
 			            </div>
 							<img src="{{ random(cms.emptyspace).gif_activeonhover|imageCrop(800,800)  }}">
+					</div>--->
+					<div class="grid-item text-center bread-item">
+						<img src="{{ random(cms.emptyspace).gif_nonactive|imageCrop(800,800)  }}">
 					</div>
+					
 				{% endif %}
 				{% if item._type == 'breadfamily' %}
 					<div class="text-center grid-item large bread-item {{item.name}}" data-category="{{item.name}}">
 				            <a onclick="breadFilter('.{{ item.name  }}');">
 					            <div class="overlay">
-						            <div class="text">{{ item.name_of_bread_family }}</div>
+						            <img src="{{ item.overlay_image|imageCrop(800,800) }}">
 					            </div>
 									<img src="{{ item.thumbnail|imageCrop(800,800) }}">
 					        </a>
